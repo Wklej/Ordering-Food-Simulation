@@ -1,0 +1,31 @@
+Modelowanie i Symulacje Komputerowe - Projekt zaliczeniowy
+Autor: Filip Wawrzyniak
+
+Temat: Czas potrzebny na zamowienie i otrzymanie jedzenia on-line.
+
+Opis etapów:
+
+	1) Strona - wybór strony internetowej, z której będzie zamawiane jedzenie. Do wyboru są 3 strony, a wybór wpływa na czas otrzymania zamówienia w ten sposób, że im strona popularniejsza, tym większy na niej przepływ zamówień oraz liczba zajętych kierowców.
+	
+	2) Kuchnia - wybór regionu, z którego pochodzi jedzenie. Popularniejsze kategorie będą miały w ofercie więcej restauracji, co przekłada się na czas decyzji, w której restauracji będzie klient chciał zamówić.
+	
+	3) Restauracja - wybór restauracji pod odpowiednią kategorią. Popularniejsze restauracje będą otrzymywały więcej zamówień i z tego powodu czas oczekiwania może się wydłużać. Zamówienia w takiej sytuacji mogą być kolejkowane.
+	
+	4) Wybór dania - im więcej restauracja posiada dań w ofercie, tym więcej czasu spędzi klient na przejrzeniu ich oraz dokonianiu wyboru.
+	
+	5) Strefa - zakwalifikowanie podanego adresu dostawy do kategorii: daleko, średnio daleko, blisko. Im adres bardziej oddalony, tym dostawca dłużej jedzie z zamówieniem.
+
+	6) Godzina - godzina złożenia zamówienia. W określonych godzinach, jak np. 12-14, czyli pora obiadowa, restauracje mają większe natężenie ruchu. Co oczywiście wpływa na czas przygotowania posiłku i realizacji zamówienia.
+
+Opis losowania:
+	
+	Losowanie przebiega wg. poniższego schematu:
+		- wylosowanie jednej z możliwości przyporządkowanej etapowi z rozkładu dyskretnego, gdzie dla każdej możliwości określone są wartości prawdopodobieństwa na wylosowanie jej.
+		- następnie w zależności od wylosowanej możliwości program przechodzi do wylosowania czasu z rozkładu normalnego. Do rozkładu normalnego podane są parametry: średnia wartość czasu, odchylenie standardowe.
+	
+		Schemat powtarzany jest 10 000 razy, a każda zsumowana wartość czasu dla etapu, zapisywana w pliku "output.txt".
+	
+	
+	
+	
+	
